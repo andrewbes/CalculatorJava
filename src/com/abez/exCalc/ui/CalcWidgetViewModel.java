@@ -1,6 +1,6 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui;
+package com.abez.exCalc.ui;
 
-import com.shpp.p2p.cs.abezkorovajnyj.assignment11.services.ExpressionService;
+import com.abez.exCalc.services.ExpressionService;
 
 public class CalcWidgetViewModel {
     public String getExpressionStr() {
@@ -16,13 +16,11 @@ public class CalcWidgetViewModel {
     }
 
     public String[] getVariablesNames() {
-        String variables[] = ExpressionService.shared.getVariablesNames();
-        return  variables;
+        return ExpressionService.shared.getVariablesNames();
     }
 
     public String getVariableName(int index) {
-        String name = ExpressionService.shared.getVariableName(index);
-        return  name;
+        return ExpressionService.shared.getVariableName(index);
     }
 
     public String getVariableValue(int index) {

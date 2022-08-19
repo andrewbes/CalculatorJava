@@ -1,4 +1,4 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.model;
+package com.abez.exCalc.model;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui.widgets;
+package com.abez.exCalc.ui.widgets;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -24,8 +24,7 @@ public class CalcJButton extends JButton {
         try {
             ImageIcon img = new ImageIcon(image);
             setIcon(img);
-        } catch (Exception ex) {
-            System.out.println(ex);
+        } catch (Exception ignore) {
         }
         setPreferredSize(new Dimension(100,30));
     }

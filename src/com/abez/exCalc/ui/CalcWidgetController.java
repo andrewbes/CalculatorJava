@@ -1,7 +1,7 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui;
+package com.abez.exCalc.ui;
 
 
-import com.shpp.p2p.cs.abezkorovajnyj.assignment11.services.ExpressionService;
+import com.abez.exCalc.services.ExpressionService;
 
 import javax.swing.*;
 import java.util.HashMap;

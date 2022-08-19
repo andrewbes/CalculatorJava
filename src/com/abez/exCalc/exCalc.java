@@ -1,14 +1,14 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11;
+package com.abez.exCalc;
 
-import com.shpp.p2p.cs.abezkorovajnyj.assignment11.services.ExpressionService;
-import com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui.CalcWidgetCoordinator;
+import com.abez.exCalc.ui.CalcWidgetCoordinator;
+import com.abez.exCalc.services.ExpressionService;
 
 /**
  * Implements the expression calculator for operations +, -, *, /, ^
  * applying the brackets and functions sqrt, sin, cos, tan, atan,
  * log10, log2. Also applying the use of arguments
  */
-public class Assignment11Part1 {
+public class exCalc {
     /**
      * Gets a mathematical expression and a list of arguments as input and
      * given a double type result as terminal output

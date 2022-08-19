@@ -1,4 +1,4 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui;
+package com.abez.exCalc.ui;
 
 public class CalcWidgetCoordinator {
 

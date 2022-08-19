@@ -1,8 +1,8 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui;
+package com.abez.exCalc.ui;
 
-import com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui.widgets.CalcJButton;
-import com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui.widgets.CalcJTextField;
-import com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui.widgets.Spacer;
+import com.abez.exCalc.ui.widgets.CalcJButton;
+import com.abez.exCalc.ui.widgets.CalcJTextField;
+import com.abez.exCalc.ui.widgets.Spacer;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -25,13 +25,12 @@ public class CalcWidget extends JFrame implements CalcWidgetControllerDelegate {
 
     private JTextField tfExpression;
     private JTextField tfResult;
-    private HashMap<String,JTextField> tfVariables = new HashMap<>();
+    private final HashMap<String,JTextField> tfVariables = new HashMap<>();
 
     private final CalcWidgetViewModel model;
     private final CalcWidgetController controller;
 
     private int resultPanelHeight;
-    private int variablesPanelHeight;
     private int expressionPanelHeight;
 
     public CalcWidget(CalcWidgetViewModel viewModel, CalcWidgetController controller)  {
@@ -83,13 +82,13 @@ public class CalcWidget extends JFrame implements CalcWidgetControllerDelegate {
         var pairHeight = model.getVariablesCount()/2 * (VAR_LABEL_HEIGHT + LABEL_VERTICAL_PADDING);
         var notPairHeight = model.getVariablesCount()/2* (VAR_LABEL_HEIGHT  + LABEL_VERTICAL_PADDING) + VAR_LABEL_HEIGHT;
         var height = model.getVariablesCount()%2 == 0 ? pairHeight: notPairHeight;
-        variablesPanelHeight = model.getVariablesNames().length * VAR_LABEL_HEIGHT/2;
+        int variablesPanelHeight = model.getVariablesNames().length * VAR_LABEL_HEIGHT / 2;
         variablesPanel.setMaximumSize(new Dimension(PANEL_WIDTH,height));
         createVariables();
         getContentPane().add(new Spacer(50,0), BorderLayout.EAST);
         getContentPane().add(variablesPanel, BorderLayout.CENTER);
 
-        var frameHeight = resultPanelHeight+variablesPanelHeight+expressionPanelHeight;
+        var frameHeight = resultPanelHeight+ variablesPanelHeight +expressionPanelHeight;
         Dimension dim = new Dimension(PANEL_WIDTH,frameHeight );
         setMinimumSize(dim);
 
@@ -114,7 +113,7 @@ public class CalcWidget extends JFrame implements CalcWidgetControllerDelegate {
     }
 
     private void createExpressionPanel() {
-        expressionPanelHeight = EXPR_LABEL_HEIGHT+LABEL_VERTICAL_PADDING;;
+        expressionPanelHeight = EXPR_LABEL_HEIGHT+LABEL_VERTICAL_PADDING;
         expressionPanel = new JPanel();
         expressionPanel.setLayout(new FlowLayout());
         expressionPanel.setBackground(Color.white);

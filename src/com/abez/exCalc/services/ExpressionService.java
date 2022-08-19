@@ -1,5 +1,5 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.services;
-import com.shpp.p2p.cs.abezkorovajnyj.assignment11.model.Expression;
+package com.abez.exCalc.services;
+import com.abez.exCalc.model.Expression;
 
 import java.util.Arrays;
 import java.util.HashMap;

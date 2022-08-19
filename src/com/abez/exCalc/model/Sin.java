@@ -1,14 +1,14 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.model;
+package com.abez.exCalc.model;
 
 import java.util.HashMap;
 
-public class Log2 implements IAction, Cloneable {
+public class Sin implements IAction, Cloneable {
     String _variable;
     HashMap<String, Double> _variables;
 
     @Override
     public IAction clone() throws CloneNotSupportedException {
-        return (Log2) super.clone();
+        return (Sin) super.clone();
     }
 
     @Override
@@ -18,6 +18,6 @@ public class Log2 implements IAction, Cloneable {
 
     @Override
     public double calculate(HashMap<String, Double> variables) {
-        return Math.log(variables.get(_variable));
+        return Math.sin(variables.get(_variable));
     }
 }

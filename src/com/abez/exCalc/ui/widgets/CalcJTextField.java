@@ -1,4 +1,4 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.ui.widgets;
+package com.abez.exCalc.ui.widgets;
 
 import javax.swing.*;
 import java.awt.*;

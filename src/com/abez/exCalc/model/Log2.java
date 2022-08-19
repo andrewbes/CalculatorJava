@@ -1,14 +1,14 @@
-package com.shpp.p2p.cs.abezkorovajnyj.assignment11.model;
+package com.abez.exCalc.model;
 
 import java.util.HashMap;
 
-public class Cos implements IAction, Cloneable {
+public class Log2 implements IAction, Cloneable {
     String _variable;
     HashMap<String, Double> _variables;
 
     @Override
     public IAction clone() throws CloneNotSupportedException {
-        return (Cos) super.clone();
+        return (Log2) super.clone();
     }
 
     @Override
@@ -18,6 +18,6 @@ public class Cos implements IAction, Cloneable {
 
     @Override
     public double calculate(HashMap<String, Double> variables) {
-        return Math.cos(variables.get(_variable));
+        return Math.log(variables.get(_variable));
     }
 }
